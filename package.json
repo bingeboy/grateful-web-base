@@ -1,0 +1,25 @@
+{
+  "name": "grateful-web-base",
+  "version": "0.0.1",
+  "description": "An Attempt to Make an Online Version of DeadBase.",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bingeboy/grateful-web-base.git"
+  },
+  "keywords": [
+    "gratefuldead"
+  ],
+  "author": "bingeboy",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/bingeboy/grateful-web-base/issues"
+  },
+  "dependencies": {
+    "nodemon": "~0.7.8",
+    "node.io": "*",
+    "googleapis": "~0.2.12-alpha"
+  }
+}

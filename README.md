@@ -4,7 +4,7 @@ grateful-web-base
 
 An (early alpha) Online Version of DeadBase.
 
-#Over View
+#Overview
 
 Grateful WebBase is an modern take on the famous Grateful Dead "DeadBase" book.
 

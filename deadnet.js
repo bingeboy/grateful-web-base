@@ -16,17 +16,17 @@ var methods = {
                     //Select all dates on the page
                     if(showDate){
                         $(showDate).each(function(a) {
-                            console.log('date: ',a.text);
+                            console.log('"date" : "',a.text+'"');
                             //showDateArray.push(a.text);
                         });
 
                         $(showVenue).each(function(a) {
-                            console.log('venue: ', a.text);
+                            //console.log('venue: ', a.text);
                             //showVenueArray.push(a.text);
                         });
 
                         //console.log(showDate);
-                        this.emit(showVenue);
+//                        this.emit(showVenue);
                     }
                 });
         }

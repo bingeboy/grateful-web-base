@@ -63,3 +63,26 @@ $node.io deadnet
 
 Code for this project but not any of the data or other api's used are covered by license BSD.
 
+       |    ||
+       |\___/|
+       |     |
+       |     |
+       |     |
+       |     |
+       |     |
+       |     |
+   ____||____|____
+  /    |     |     \
+ /     |     |    | \
+|      |     |    |  |
+|      |     |    |  |
+|                 |  |
+|                 |  |
+|                    /
+|                   /
+ \                 /
+  \               /
+   |             |
+   |             |
+
+This repo is watched by Prism and the NSA. 

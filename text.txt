@@ -1,0 +1,42 @@
+date:  August 18, 1967
+date:  August 25, 1967
+date:  August 28, 1967
+date:  August 28, 1967
+date:  September 3, 1967
+date:  September 4, 1967
+date:  September 8, 1967
+date:  September 9, 1967
+date:  September 9, 1967
+date:  September 15, 1967
+date:  September 16, 1967
+date:  September 22, 1967
+date:  September 23, 1967
+date:  September 24, 1967
+date:  September 28, 1967
+date:  September 30, 1967
+date:  October 1, 1967
+date:  October 14, 1967
+date:  October 31, 1967
+date:  November 10, 1967
+venue:  American Legion Hall
+venue:  King's Beach Bowl
+venue:  Lindley Meadows
+venue:  King's Beach Bowl
+venue:  Dance Hall
+venue:  Dance Hall
+venue:  Eagle's Auditorium
+venue:  Eagles Auditorium
+venue:  Volunteer Park
+venue:  Hollywood Bowl
+venue:  Griffith Park
+venue:  Family Dog
+venue:  Family Dog
+venue:  City Park
+venue:  Straight Theater
+venue:  Straight Theater
+venue:  Greek Theatre
+venue:  Continental Ballroom
+venue:  Winterland Arena
+venue:  Shrine Exhibition Hall
+div#content div.item-list div.views-field a[href^="/venue/"]
+[32mOK[0m: Job complete

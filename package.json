@@ -18,8 +18,11 @@
     "url": "https://github.com/bingeboy/grateful-web-base/issues"
   },
   "dependencies": {
-    "nodemon": "~0.7.8",
-    "node.io": "*",
-    "googleapis": "~0.2.12-alpha"
+    "express": "~3.3.1",
+    "request": "~2.21.0",
+    "nodemon": "*",
+    "JSONStream": "~0.6.4",
+    "event-stream": "~3.0.15",
+    "googlemaps": "~0.1.8"
   }
 }

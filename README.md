@@ -55,6 +55,8 @@ Display additional mapping data options (Example: Heat Map based on most played 
 
 ####Data scrapping file here:
 
+Node.io npm was used for scrapping data needed to create full tour dates. This has been dropped from package.json.
+
 <code>
 $node.io deadnet 
 </code>

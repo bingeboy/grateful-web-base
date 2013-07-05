@@ -48,6 +48,8 @@ JSON Files of all Dead Show dates and venues scrapped and formated.
 
 TODOs:
 Connect json to googlemaps
+Move Map Calls Server side and 
+
 Push Ogg files from archive.org
 Pull Set lists with node.io
 Create UI Tool to drag or click through Tours
@@ -65,28 +67,4 @@ $node.io deadnet
 
 Code for this project but not any of the data or other api's used are covered by license BSD.
 
-<!--
-
-       |    ||
-       |\___/|
-       |     |
-       |     |
-       |     |
-       |     |
-       |     |
-       |     |
-   ____||____|____
-  /    |     |     \
- /     |     |    | \
-|      |     |    |  |
-|      |     |    |  |
-|                 |  |
-|                 |  |
-|                    /
-|                   /
- \                 /
-  \               /
-   |             |
-   |             |
--->
 This repo is watched by Prism and the NSA. 

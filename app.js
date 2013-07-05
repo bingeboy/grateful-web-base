@@ -1,14 +1,11 @@
+
 var app = require('express')()
     , server = require('http').createServer(app)
-    , express = require('express')
     , http = require('http')
-    , dates = require('./data/dates')
-    , venues = require('./data/venues')
+	, gm = require('googlemaps')
+	, util = require('util')
+    , dates = require('./data/deadTour.json')
     , port  = 3000;
-
-
-console.log('dates: ', dates.showDates.length);
-console.log('Venue: ', venues.showVenue.length);
 
 /*
  *  Express : Configure
@@ -17,9 +14,20 @@ app.configure(function() {
     app.use(app.router);
 });
 
-server.listen(port);
-console.log("server.listen on port: ", port);
+//reverse geocode thee venue
+//gm.geocode('giants stadium', function(err, data){
+//	console.log(data);
+//	util.puts(JSON.stringify(data));
+//});
 
+//emit the callback from geocode to pipe to client
+var x = dates.showDates; 
+var y = venues.showVenues;
+
+
+for (var attrname in y) { 
+		console.log(x[attrname],  y[attrname]);
+	}
 
 /*
  *  Routes : Handles URL mapping

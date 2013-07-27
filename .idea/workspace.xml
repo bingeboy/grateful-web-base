@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb5698be-b355-41bd-ab08-10bc6fabff82" name="Default" comment="" />
+    <list default="true" id="eb5698be-b355-41bd-ab08-10bc6fabff82" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="grateful-web-base.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372988445363" ignored="false" />
+    <file path="/Dummy.txt" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1373126800421" ignored="false" />
     <file path="/deadnet.js" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372483877310" ignored="false" />
     <file path="/app.js" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372549170270" ignored="false" />
     <file path="/dates.json" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372519369337" ignored="false" />
     <file path="/index" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372536097932" ignored="false" />
-    <file path="/index.html" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372565923465" ignored="false" />
+    <file path="/index.html" changelist="eb5698be-b355-41bd-ab08-10bc6fabff82" time="1372997607300" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +36,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="10" column="23" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -41,7 +45,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="9" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.7936726">
+            <state line="88" column="23" selection-start="2939" selection-end="2939" vertical-scroll-proportion="0.43328747">
               <folding />
             </state>
           </provider>
@@ -94,7 +98,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="21" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
@@ -125,7 +128,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,15 +176,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -212,7 +216,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -294,6 +298,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="23" selection-start="2939" selection-end="2939" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/venues.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="4" selection-end="13" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/dates.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="6" selection-end="15" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/dates.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="4" selection-start="6" selection-end="15" vertical-scroll-proportion="0.0">
@@ -373,14 +398,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+        <state line="10" column="23" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="9" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.7936726">
+        <state line="88" column="23" selection-start="2939" selection-end="2939" vertical-scroll-proportion="0.43328747">
           <folding />
         </state>
       </provider>

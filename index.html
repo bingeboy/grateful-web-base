@@ -27,7 +27,7 @@
         #map-canvas { height: 100% }
     </style>
     <script type="text/javascript">
-		//new maps gui
+		//GIVE ME ALL THE MAGIC.
 		google.maps.visualRefresh = true;
 
         var geocoder = new google.maps.Geocoder();
@@ -59,6 +59,8 @@
                 map: map,
                 title: 'Hello World!'
             });
+  			 marker.setAnimation(google.maps.Animation.BOUNCE)        
+
         }
 
 
@@ -72,6 +74,7 @@
 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(success, error, 10000);
+			console.log('tes');
         } else {
             error('not supported');
         }
@@ -83,13 +86,13 @@
             geocoder.geocode( { 'address': address}, function(results, status) {
                 console.log(address);
                 if (status == google.maps.GeocoderStatus.OK) {
-
                     console.log(results);
-//                    map.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        map: results[0].geometry.location,
-                        position: results[0].geometry.location
-                    });
+
+                    if(typeof map !== 'undefined') {
+						map.setCenter(results[0].geometry.location)
+					}
+
+                    displayMarker(results);
                 } else {
                     alert('Geocode was not successful for the following reason: ' + status);
                 }
@@ -98,6 +101,21 @@
         var searchTerm = "shoreline amphitheatre";
         codeAddress(searchTerm);
 
+
+        function displayMarker(data,markerCount){
+
+           //needed with search ~ turned off for now.
+/*
+            var marker = new google.maps.Marker({
+                map: results[0].geometry.location,
+                position: results[0].geometry.location
+            });
+*/
+        }
+
+
+
     </script>
 </body>
 </html>
+

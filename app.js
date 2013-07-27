@@ -1,45 +1,49 @@
 
-var app = require('express')()
-    , server = require('http').createServer(app)
+var express = require('express')
+    , htpp = require('http')
     , http = require('http')
 	, gm = require('googlemaps')
-	, util = require('util')
     , dates = require('./data/deadTour.json')
-    , port  = 3000;
+    , fs       = require('fs')
+    , http     = require('http')
+    , util     = require('util')
+    , path     = require('path');
+
+var app = express();
+
 
 /*
- *  Express : Configure
+ * connect middleware
  */
 app.configure(function() {
+    app.set('port', process.env.PORT || 3000);
+    app.use(express.favicon());
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/uploads' }));
+    app.use(express.methodOverride());
+    app.use(express.cookieParser('your secret here'));
+    app.use(express.session());
     app.use(app.router);
+    app.use(express.errorHandler());
 });
-
+	
 //reverse geocode thee venue
 //gm.geocode('giants stadium', function(err, data){
 //	console.log(data);
 //	util.puts(JSON.stringify(data));
 //});
 
-//emit the callback from geocode to pipe to client
-var x = dates.showDates; 
-var y = venues.showVenues;
-
-
-for (var attrname in y) { 
-		console.log(x[attrname],  y[attrname]);
-	}
-
 /*
  *  Routes : Handles URL mapping
  */
 app.get('/', function (req, res) {
-    res.sendfile('./index.html');
+    res.sendfile(__dirname + '/index.html');
 });
 
 
 /*
  *  Run Server
  */
-server.listen(app.get('port'), function(){
-    console.log('Express server listening on port ' + port);
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
 });

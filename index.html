@@ -3,116 +3,132 @@
 <head>
     <meta charset="utf-8">
     <title>Grateful WebBase</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <style type="text/css">
+		#map-canvas, #map_canvas {
+ 			 height: 100%;
+		}
 
-    <!--CDN -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  	#map-canvas, #map_canvas {
+    	height: 650px;
+  	}
 
+    </style>
     <!--head script-->
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-</head>
-<body>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+ </head>
+ <body>
     <h1>Grateful WebBase</h1>
     <div id="map-canvas"></div>
-    <!--let browser UI thread complete the run JS-->
-    <script serc="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <style type="text/css">
-        html { height: 100% }
-        body { height: 100%; margin: 0; padding: 0 }
-        #map-canvas { height: 100% }
-    </style>
+    <!-- <script serc="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
     <script type="text/javascript">
 		//GIVE ME ALL THE MAGIC.
 		google.maps.visualRefresh = true;
+
+		//Yo they're needed all over the place.
+		var marker,
+            map;
+
+
+		//Geolocation callbacks ~ not the best location but... 
+        var success = function(locationData){
+                    console.log("locationData object", locationData);
+                    google.maps.event.addDomListener(window, 'load', initialize(locationData));
+                }
+			,  error = function(err){
+                    console.log(err);
+        	};
+
+		//do browser geo location check
+		var init = ( function() {
+       		 if (navigator.geolocation) {
+       		     navigator.geolocation.getCurrentPosition(success, error, 10000);
+				console.log('tes');
+       		 }
+			else {
+        	    error('not supported');
+        	};
+		})()
 
         var geocoder = new google.maps.Geocoder();
 
         function initialize(locationReceived) {
 
-            //Init geolocation
+            //Init google maps geolocation mapping method. TODO abstract this into a service.
             var myLatlng = new google.maps.LatLng(locationReceived.coords.latitude, locationReceived.coords.longitude);
 
             console.log(locationReceived);
 
+		//bounce Toggle
+		function toggleBounce() {
+ 		 if (marker.getAnimation() !== null ) {
+ 				 marker.setAnimation(null);
+ 		 } else {
+			    marker.setAnimation(google.maps.Animation.BOUNCE);
+  			}
+		};
+
+
+
             var mapOptions = {
                 center: myLatlng,
                 zoom: 18,
-                mapTypeId: google.maps.MapTypeId.SATELLITE,
-			    panControl: true,
-			    zoomControl: true,
-				mapTypeControl: true,
-			    scaleControl: true,
-			    streetViewControl: true,
-			    overviewMapControl: true
-            };
+                mapTypeId: google.maps.MapTypeId.ROAD,
+                animation: google.maps.Animation.DROP,
+			};
+
 
             var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+			//Helicopter View
             map.setTilt(45);
 
             var marker = new google.maps.Marker({
-                position: myLatlng,
                 map: map,
-                title: 'Hello World!'
+    			animation: google.maps.Animation.DROP,
+                position: myLatlng,
             });
-  			 marker.setAnimation(google.maps.Animation.BOUNCE)        
-
+			console.log('this is the marker', marker);
+            google.maps.event.addListener(marker, 'click', toggleBounce);
         }
 
+		var init = function(){
+       		 if (navigator.geolocation) {
+       		     navigator.geolocation.getCurrentPosition(success, error, 10000);
+				console.log('tes');
+       		 } else {
+        	    error('not supported');
+        	}
+		}
 
-        var success = function(locationData){
-                    console.log("locationData object", locationData);
-                    google.maps.event.addDomListener(window, 'load', initialize(locationData));
-                },
-                error = function(err){
-                    console.log(err);
-                };
 
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(success, error, 10000);
-			console.log('tes');
-        } else {
-            error('not supported');
-        }
+		function drop() {
+  			for (var i =0; i < markerArray.length; i++) {
+  			  setTimeout(function() {
+     		 	addMarkerMethod();
+ 		   }, i * 200);
+ 		 }
+		}
 
 
 		//this is where a socket event
         function codeAddress(searchTerm) {
             var address = searchTerm;
             geocoder.geocode( { 'address': address}, function(results, status) {
+/* commenting out until this code is need to run on arrays of data
                 console.log(address);
                 if (status == google.maps.GeocoderStatus.OK) {
                     console.log(results);
 
-                    if(typeof map !== 'undefined') {
 						map.setCenter(results[0].geometry.location)
-					}
-
-                    displayMarker(results);
                 } else {
                     alert('Geocode was not successful for the following reason: ' + status);
                 }
+end of comment here */
             });
         }
         var searchTerm = "shoreline amphitheatre";
         codeAddress(searchTerm);
-
-
-        function displayMarker(data,markerCount){
-
-           //needed with search ~ turned off for now.
-/*
-            var marker = new google.maps.Marker({
-                map: results[0].geometry.location,
-                position: results[0].geometry.location
-            });
-*/
-        }
-
 
 
     </script>

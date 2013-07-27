@@ -41,6 +41,10 @@ app.get('/', function (req, res) {
 });
 
 
+app.get('/example', function (req, res) {
+    res.sendfile(__dirname + '/example-no-geoloc.html');
+});
+
 /*
  *  Run Server
  */
